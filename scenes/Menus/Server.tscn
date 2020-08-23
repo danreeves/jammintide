@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Menus/Server.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Connect to server" type="RichTextLabel" parent="."]
+margin_left = 56.0
+margin_top = 24.0
+margin_right = 240.0
+margin_bottom = 64.0
+bbcode_enabled = true
+bbcode_text = "[b]Connect to server:[/b]"
+text = "Connect to server:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="TextEdit" parent="."]
+margin_left = 128.0
+margin_top = 64.0
+margin_right = 241.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 93.0132, 0 )
+text = "127.0.0.1"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Port" type="TextEdit" parent="."]
+margin_left = 128.0
+margin_top = 104.0
+margin_right = 241.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 93.0132, 0 )
+text = "13337"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ip Label" type="RichTextLabel" parent="."]
+margin_left = 56.0
+margin_top = 72.0
+margin_right = 128.0
+margin_bottom = 88.0
+text = "Ip address:"
+scroll_active = false
+
+[node name="Port Label" type="RichTextLabel" parent="."]
+margin_left = 96.0
+margin_top = 112.0
+margin_right = 128.0
+margin_bottom = 128.0
+text = "Port:"
+scroll_active = false
+
+[node name="ConnectButton" type="Button" parent="."]
+margin_left = 128.0
+margin_top = 144.0
+margin_right = 240.0
+margin_bottom = 164.0
+text = "Connect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Port2" type="TextEdit" parent="."]
+margin_left = 384.0
+margin_top = 64.0
+margin_right = 497.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 93.0132, 0 )
+text = "13337"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Port2 Label" type="RichTextLabel" parent="."]
+margin_left = 352.0
+margin_top = 72.0
+margin_right = 384.0
+margin_bottom = 88.0
+text = "Port:"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateButton" type="Button" parent="."]
+margin_left = 384.0
+margin_top = 144.0
+margin_right = 496.0
+margin_bottom = 164.0
+text = "Create"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 352.0
+margin_top = 24.0
+margin_right = 520.0
+margin_bottom = 64.0
+text = "Create a server:"
