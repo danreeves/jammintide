@@ -18,9 +18,6 @@ func _ready():
 
 var peers = {}
 
-# TODO: Move to a PlayerProfile global
-var my_info = { name = "rain" }
-
 func create_server(port = 13337, max_players = 4):
 	var peer = NetworkedMultiplayerENet.new()
 	peer.create_server(port, max_players)
@@ -33,7 +30,7 @@ func connect_to_server(ip, port):
 	
 func get_players():
 	var players = peers.duplicate(true)
-	players[get_tree().get_network_unique_id()] = my_info
+	players[get_tree().get_network_unique_id()] = PlayerProfile.to_dict()
 	return players
 	
 func is_server():
@@ -44,7 +41,7 @@ func is_client():
 
 func _player_connected(id):
 	# Someone connected, let them know about myself
-	rpc_id(id, "register_player", my_info)
+	rpc_id(id, "register_player", PlayerProfile.to_dict())
 
 func _player_disconnected(id):
 	peers.erase(id)

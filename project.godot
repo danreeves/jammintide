@@ -21,7 +21,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Network="*res://script/network/Network.gd"
+PlayerProfile="*res://script/PlayerProfile.gd"
+Network="*res://script/Network.gd"
 SceneManager="*res://script/SceneManager.gd"
 
 [display]
@@ -29,6 +30,7 @@ SceneManager="*res://script/SceneManager.gd"
 window/size/width=1280
 window/size/height=720
 window/dpi/allow_hidpi=true
+window/vsync/vsync_via_compositor=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 

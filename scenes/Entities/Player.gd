@@ -11,7 +11,11 @@ func _ready() -> void:
 
 func init(player_peer_id):
 	peer_id = player_peer_id
-	$Name.text = Network.get_players()[peer_id].name
+	var profile = Network.get_players()[peer_id]
+	$Name.bbcode_text = "[center]" + profile.name + "[/center]"
+	print(profile)
+	if profile.profile_id == 2:
+		$Sprite.modulate = "#00ff00"
 
 func _physics_process(delta):
 	if is_network_master():
