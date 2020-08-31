@@ -12,6 +12,7 @@ func _ready() -> void:
 	$ProfileSelect.add_item("Kruber", 1)
 	$ProfileSelect.add_item("Kerillian", 2)
 	$ProfileSelect.selected = PlayerProfile.profile_id - 1
+	# warning-ignore:return_value_discarded
 	$ProfileSelect.connect("item_selected", self, "select_profile")
 	
 func create_server():
